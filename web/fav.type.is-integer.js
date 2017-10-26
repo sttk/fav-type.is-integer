@@ -22,6 +22,15 @@ function checkInteger(num) {
   return Number.isInteger(num);
 }
 
+function isNotInteger(value) {
+  return !isInteger(value);
+}
+
+Object.defineProperty(isInteger, 'not', {
+  enumerable: true,
+  value: isNotInteger,
+});
+
 module.exports = isInteger;
 
 },{}]},{},[1])(1)

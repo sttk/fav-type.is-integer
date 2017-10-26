@@ -6,6 +6,7 @@ Checks whether a value is an integer or not.
 > This package is intended to support all Node.js versions and many browsers as possible.
 > At least, this package supports Node.js >= v0.10 and major Web browsers: Chrome, Firefox, IE11, Edge, Vivaldi and Safari.
 
+
 ## Install
 
 To install from npm:
@@ -14,7 +15,7 @@ To install from npm:
 $ npm install --save @fav/type.is-integer
 ```
 
-***NOTE:*** *npm < 2.7.0 does not support scoped package, but even old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/type.is-integer/` direcotry manually.*
+***NOTE:*** *npm < 2.7.0 does not support scoped package, but even old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/type.is-integer/` directory manually.*
 
 
 ## Usage
@@ -27,6 +28,11 @@ isInteger(123); // => true
 isInteger(4.56); // => false
 isInteger(Infinity); // => false
 isInteger(NaN); // => false
+
+isInteger.not(123); // => false
+isInteger.not(4.56); // => true
+isInteger.not(Infinity); // => true
+isInteger.not(NaN); // => true
 ```
 
 For Web browsers:
@@ -36,6 +42,7 @@ For Web browsers:
 <script>
 var isInteger = fav.type.isInteger;
 isInteger(123); // => true
+isInteger.not(123); // => false
 </script>
 ```
 
@@ -55,6 +62,25 @@ Checks if *value* is an integer, which has no dicimal place and is neither a pos
 #### Return:
 
 True, if *value* is an integer.
+
+**Type:** boolean
+
+
+### <u>isInteger.not(value) : boolean</u>
+
+Checks if *value* is not an integer.
+
+This function always returns a negative boolean of `isInteger(value)`.
+
+#### Parameter:
+
+| Parameter |  Type  | Description              |
+|-----------|:------:|--------------------------|
+| value     | *any*  | The value to be checked. |
+
+#### Return:
+
+True, if *value* is not an integer.
 
 **Type:** boolean
 
