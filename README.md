@@ -20,7 +20,7 @@ $ npm install --save @fav/type.is-integer
 
 ## Usage
 
-For Node.js, when installing `@fav/type.is-integer` from npm:
+For Node.js:
 
 ```js
 var isInteger = require('@fav/type.is-integer');
