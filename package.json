@@ -1,6 +1,6 @@
 {
   "name": "@fav/type.is-integer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checks whether a value is an integer or not.",
   "main": "index.js",
   "files": [
